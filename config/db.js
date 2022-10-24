@@ -1,5 +1,5 @@
 // Do not expose your credentials in your code.
-let atlasDB = "mongodb+srv://<username>:<passoword>@<cluster>/todo?retryWrites=true&w=majority";
+let atlasDB = "mongodb+srv://dbuser:dbuser@cluster005.asvptdk.mongodb.net/todo?retryWrites=true&w=majority";
 
 // Database setup
 let mongoose = require('mongoose');
@@ -16,3 +16,5 @@ module.exports = function(){
 
     return mongodb;
 }
+
+// mongodb+srv://dbuser:dbuser@cluster005.asvptdk.mongodb.net/todo?retryWrites=true&w=majority

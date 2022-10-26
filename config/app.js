@@ -1,3 +1,4 @@
+// modules needed for the app
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
@@ -18,7 +19,7 @@ app.use(session({
   secret: "sessionSecret"
 }));
 
-
+// router for index, todo, and user views
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let todoRouter = require('../routes/todo');
@@ -39,7 +40,7 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+// connect the routes to the views
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/todo', todoRouter);
